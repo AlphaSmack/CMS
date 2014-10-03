@@ -55,14 +55,16 @@
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="[(site_url)][~11~]" />
   </head>
 <body>
-<body>
-<div id="header">
+<header>
+<div class="header">
 	<h1><a href="[[*site_url]]">CMS Kodutöö</a></h1>
 </div>
+</header>
+<article>
 <div id="left">
 	<div id="menu" class="boxed">
 		<h2 class="heading">Pages</h2>
-<ul><li class="first active"><a href="http://localhost:8080/cms/" title="CMS Kodutöö" >CMS Kodutöö</a></li>
+<ul><li class="first active"><a href="http://192.168.1.67:8080/cms/" title="CMS Kodutöö" >CMS Kodutöö</a></li>
 </ul>
 
 		<h2 class="heading">Latest Entries</h2>
@@ -97,6 +99,7 @@
 <div id="footer">
 	<p id="legal">Copyright &copy; [(site_name)]. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. Template by <a href="http://modxd.com">MODx Templates</a></p>
 	<p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+<article>
 </div>
 </body>
 </html>',
@@ -119,7 +122,7 @@
   array (
     '[[*pagetitle]]' => 'CMS Kodutöö',
     '[[*longtitle]]' => 'Ei soovita',
-    '[[Wayfinder?startId=`0` &level=`1`]]' => '<ul><li class="first active"><a href="http://localhost:8080/cms/" title="CMS Kodutöö" >CMS Kodutöö</a></li>
+    '[[Wayfinder?startId=`0` &level=`1`]]' => '<ul><li class="first active"><a href="http://192.168.1.67:8080/cms/" title="CMS Kodutöö" >CMS Kodutöö</a></li>
 </ul>',
   ),
   'sourceCache' => 
@@ -933,6 +936,9 @@ if ($wf->_config[\'ph\']) {
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (

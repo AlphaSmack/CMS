@@ -10,7 +10,7 @@ Released for free under a Creative Commons Attribution 2.5 License
 }
 
 body {
-	background: #FFFFFF url(images/img1.jpg) repeat-x;
+    background: url(images/back.jpg);
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: #666666;
@@ -18,6 +18,10 @@ body {
 
 h1, h2, h3 {
 	color: #000000;
+}
+
+header{
+    background: #FFFFFF url(images/img1.jpg) repeat-x;
 }
 
 p, blockquote, ul, ol {
@@ -49,17 +53,19 @@ a:hover {
 /* Header */
 
 #header {
-	width: 660px;
+	width: 90%;
 	height: 180px;
 	margin: 0 auto;
-	background: url(images/img2.jpg) no-repeat;
-	text-align: center;
+	text-align: right;
 }
 
 #header a {
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #000000;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 5px;
+    padding: 10px;
 }
 
 #header h1 {

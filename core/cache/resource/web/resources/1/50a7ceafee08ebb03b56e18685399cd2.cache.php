@@ -1,4 +1,4 @@
-<?php if(time() > 1412292949){return null;} return array (
+<?php if(time() > 1412299970){return null;} return array (
   1 => 
   array (
     0 => 
@@ -49,7 +49,7 @@
         'show_in_tree' => 1,
         'properties' => NULL,
         'protected' => false,
-        'link' => 'http://localhost:8080/cms/',
+        'link' => 'http://192.168.1.67:8080/cms/',
         'level' => 1,
         'linktext' => 'CMS Kodutöö',
         'title' => 'CMS Kodutöö',

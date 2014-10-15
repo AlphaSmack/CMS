@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '768ecadf390183a985ab5d3332c22855',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'c2d44f72a27c1757936de56fe4152ee2',
+  'native_key' => 'password_generated_length',
+  'object' => '{"key":"password_generated_length","value":"8","xtype":"textfield","namespace":"core","area":"authentication","editedon":null}',
+);

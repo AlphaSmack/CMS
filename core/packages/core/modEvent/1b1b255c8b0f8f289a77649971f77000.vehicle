@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '4e8fd74502f7cffe68e93f4c9fd2d6e5',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '1b1b255c8b0f8f289a77649971f77000',
+  'native_key' => 'OnUserFormRender',
+  'object' => '{"name":"OnUserFormRender","service":1,"groupname":"Users"}',
+);

@@ -1,0 +1,1 @@
+<center><font color=red><h2>Access denied!</font></h2><BR><BR><?php echo $_SERVER['REMOTE_ADDR']; ?></center>

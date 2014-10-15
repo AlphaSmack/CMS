@@ -1,0 +1,812 @@
+[2014-10-01 14:00:33] (ERROR @ /cms/setup/index.php) Could not create table `modx_access_policies`
+SQL: CREATE TABLE `modx_access_policies` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL, `description` MEDIUMTEXT NULL, `parent` INT(10) unsigned NOT NULL DEFAULT '0', `template` INT(10) unsigned NOT NULL DEFAULT '0', `class` VARCHAR(255) NOT NULL DEFAULT '', `data` TEXT NULL, `lexicon` VARCHAR(255) NOT NULL DEFAULT 'permissions', PRIMARY KEY (`id`), UNIQUE KEY `name` (`name`), INDEX `parent` (`parent`), INDEX `class` (`class`), INDEX `template` (`template`)) ENGINE=MyISAM
+ERROR: Array
+(
+    [0] => 42000
+    [1] => 1071
+    [2] => Specified key was too long; max key length is 1000 bytes
+)
+
+[2014-10-01 14:00:34] (ERROR @ /cms/setup/index.php) Could not create table `modx_content_type`
+SQL: CREATE TABLE `modx_content_type` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL, `description` TINYTEXT NULL, `mime_type` TINYTEXT NULL, `file_extensions` TINYTEXT NULL, `headers` MEDIUMTEXT NULL, `binary` TINYINT(1) unsigned NOT NULL DEFAULT '0', PRIMARY KEY (`id`), UNIQUE KEY `name` (`name`)) ENGINE=MyISAM
+ERROR: Array
+(
+    [0] => 42000
+    [1] => 1071
+    [2] => Specified key was too long; max key length is 1000 bytes
+)
+
+[2014-10-01 14:00:34] (ERROR @ /cms/setup/index.php) Could not create table `modx_context_resource`
+SQL: CREATE TABLE `modx_context_resource` (`context_key` VARCHAR(255) NOT NULL, `resource` INT(11) unsigned NOT NULL, PRIMARY KEY (`context_key`,`resource`)) ENGINE=MyISAM
+ERROR: Array
+(
+    [0] => 42000
+    [1] => 1071
+    [2] => Specified key was too long; max key length is 1000 bytes
+)
+
+[2014-10-01 14:00:34] (ERROR @ /cms/setup/index.php) Could not create table `modx_context_setting`
+SQL: CREATE TABLE `modx_context_setting` (`context_key` VARCHAR(255) NOT NULL, `key` VARCHAR(50) NOT NULL, `value` MEDIUMTEXT NULL, `xtype` VARCHAR(75) NOT NULL DEFAULT 'textfield', `namespace` VARCHAR(40) NOT NULL DEFAULT 'core', `area` VARCHAR(255) NOT NULL DEFAULT '', `editedon` TIMESTAMP NOT NULL ON UPDATE CURRENT_TIMESTAMP, PRIMARY KEY (`context_key`,`key`)) ENGINE=MyISAM
+ERROR: Array
+(
+    [0] => 42000
+    [1] => 1071
+    [2] => Specified key was too long; max key length is 1000 bytes
+)
+
+[2014-10-01 14:00:35] (ERROR @ /cms/setup/index.php) Could not create table `modx_menus`
+SQL: CREATE TABLE `modx_menus` (`text` VARCHAR(255) NOT NULL DEFAULT '', `parent` VARCHAR(255) NOT NULL DEFAULT '', `action` VARCHAR(255) NOT NULL DEFAULT '', `description` VARCHAR(255) NOT NULL DEFAULT '', `icon` VARCHAR(255) NOT NULL DEFAULT '', `menuindex` INT(11) unsigned NOT NULL DEFAULT '0', `params` TEXT NOT NULL, `handler` TEXT NOT NULL, `permissions` TEXT NOT NULL, `namespace` VARCHAR(100) NOT NULL DEFAULT 'core', PRIMARY KEY (`text`), INDEX `parent` (`parent`), INDEX `action` (`action`), INDEX `namespace` (`namespace`)) ENGINE=MyISAM
+ERROR: Array
+(
+    [0] => 42000
+    [1] => 1071
+    [2] => Specified key was too long; max key length is 1000 bytes
+)
+
+[2014-10-01 14:00:35] (ERROR @ /cms/setup/index.php) Could not create table `modx_site_plugin_events`
+SQL: CREATE TABLE `modx_site_plugin_events` (`pluginid` INT(10) NOT NULL DEFAULT '0', `event` VARCHAR(255) NOT NULL DEFAULT '', `priority` INT(10) NOT NULL DEFAULT '0', `propertyset` INT(10) unsigned NOT NULL DEFAULT '0', PRIMARY KEY (`pluginid`,`event`), INDEX `priority` (`priority`)) ENGINE=MyISAM
+ERROR: Array
+(
+    [0] => 42000
+    [1] => 1071
+    [2] => Specified key was too long; max key length is 1000 bytes
+)
+
+[2014-10-01 14:00:35] (ERROR @ /cms/setup/index.php) Could not create table `modx_documentgroup_names`
+SQL: CREATE TABLE `modx_documentgroup_names` (`id` INT(10) unsigned NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL DEFAULT '', `private_memgroup` TINYINT(1) unsigned NOT NULL DEFAULT '0', `private_webgroup` TINYINT(1) unsigned NOT NULL DEFAULT '0', PRIMARY KEY (`id`), UNIQUE KEY `name` (`name`)) ENGINE=MyISAM
+ERROR: Array
+(
+    [0] => 42000
+    [1] => 1071
+    [2] => Specified key was too long; max key length is 1000 bytes
+)
+
+[2014-10-01 14:00:35] (ERROR @ /cms/setup/index.php) Could not create table `modx_session`
+SQL: CREATE TABLE `modx_session` (`id` VARCHAR(255) NOT NULL DEFAULT '', `access` INT(20) unsigned NOT NULL, `data` MEDIUMTEXT NULL, PRIMARY KEY (`id`), INDEX `access` (`access`)) ENGINE=MyISAM
+ERROR: Array
+(
+    [0] => 42000
+    [1] => 1071
+    [2] => Specified key was too long; max key length is 1000 bytes
+)
+
+[2014-10-01 14:00:36] (ERROR @ /cms/setup/index.php) Could not create table `modx_membergroup_names`
+SQL: CREATE TABLE `modx_membergroup_names` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL DEFAULT '', `description` TEXT NULL, `parent` INT(10) unsigned NOT NULL DEFAULT '0', `rank` INT(10) unsigned NOT NULL DEFAULT '0', `dashboard` INT(10) unsigned NOT NULL DEFAULT '1', PRIMARY KEY (`id`), UNIQUE KEY `name` (`name`), INDEX `parent` (`parent`), INDEX `rank` (`rank`), INDEX `dashboard` (`dashboard`)) ENGINE=MyISAM
+ERROR: Array
+(
+    [0] => 42000
+    [1] => 1071
+    [2] => Specified key was too long; max key length is 1000 bytes
+)
+
+[2014-10-01 14:00:36] (ERROR @ /cms/setup/index.php) Could not create table `modx_user_group_roles`
+SQL: CREATE TABLE `modx_user_group_roles` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL, `description` MEDIUMTEXT NULL, `authority` INT(10) unsigned NOT NULL DEFAULT '9999', PRIMARY KEY (`id`), UNIQUE KEY `name` (`name`), INDEX `authority` (`authority`)) ENGINE=MyISAM
+ERROR: Array
+(
+    [0] => 42000
+    [1] => 1071
+    [2] => Specified key was too long; max key length is 1000 bytes
+)
+
+[2014-10-01 14:00:36] (ERROR @ /cms/setup/index.php) Could not create table `modx_workspaces`
+SQL: CREATE TABLE `modx_workspaces` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL DEFAULT '', `path` VARCHAR(255) NOT NULL DEFAULT '', `created` DATETIME NOT NULL, `active` TINYINT(1) unsigned NOT NULL DEFAULT '0', `attributes` MEDIUMTEXT NULL, PRIMARY KEY (`id`), INDEX `name` (`name`), UNIQUE KEY `path` (`path`), INDEX `active` (`active`)) ENGINE=MyISAM
+ERROR: Array
+(
+    [0] => 42000
+    [1] => 1071
+    [2] => Specified key was too long; max key length is 1000 bytes
+)
+
+[2014-10-01 14:00:36] (ERROR @ /cms/setup/index.php) Could not create table `modx_register_messages`
+SQL: CREATE TABLE `modx_register_messages` (`topic` INTEGER(10) unsigned NOT NULL, `id` VARCHAR(255) NOT NULL, `created` DATETIME NOT NULL, `valid` DATETIME NOT NULL, `accessed` TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP, `accesses` INTEGER(10) unsigned NOT NULL DEFAULT '0', `expires` INTEGER(20) NOT NULL DEFAULT '0', `payload` MEDIUMTEXT NOT NULL, `kill` TINYINT(1) unsigned NOT NULL DEFAULT '0', PRIMARY KEY (`topic`,`id`), INDEX `created` (`created`), INDEX `valid` (`valid`), INDEX `accessed` (`accessed`), INDEX `accesses` (`accesses`), INDEX `expires` (`expires`)) ENGINE=MyISAM
+ERROR: Array
+(
+    [0] => 42000
+    [1] => 1071
+    [2] => Specified key was too long; max key length is 1000 bytes
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Could not create table `modx_register_queues`
+SQL: CREATE TABLE `modx_register_queues` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL, `options` MEDIUMTEXT NULL, PRIMARY KEY (`id`), UNIQUE KEY `name` (`name`)) ENGINE=MyISAM
+ERROR: Array
+(
+    [0] => 42000
+    [1] => 1071
+    [2] => Specified key was too long; max key length is 1000 bytes
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Could not create table `modx_transport_packages`
+SQL: CREATE TABLE `modx_transport_packages` (`signature` VARCHAR(255) NOT NULL, `created` DATETIME NOT NULL, `updated` TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP, `installed` DATETIME NULL, `state` TINYINT(1) unsigned NOT NULL DEFAULT '1', `workspace` INTEGER(10) unsigned NOT NULL DEFAULT '0', `provider` INTEGER(10) unsigned NOT NULL DEFAULT '0', `disabled` TINYINT(1) unsigned NOT NULL DEFAULT '0', `source` TINYTEXT NULL, `manifest` TEXT NULL, `attributes` MEDIUMTEXT NULL, `package_name` VARCHAR(255) NOT NULL, `metadata` TEXT NULL, `version_major` SMALLINT unsigned NOT NULL DEFAULT '0', `version_minor` SMALLINT unsigned NOT NULL DEFAULT '0', `version_patch` SMALLINT unsigned NOT NULL DEFAULT '0', `release` VARCHAR(100) NOT NULL DEFAULT '', `release_index` SMALLINT unsigned NOT NULL DEFAULT '0', PRIMARY KEY (`signature`), INDEX `workspace` (`workspace`), INDEX `provider` (`provider`), INDEX `disabled` (`disabled`), INDEX `package_name` (`package_name`), INDEX `version_major` (`version_major`), INDEX `version_minor` (`version_minor`), INDEX `version_patch` (`version_patch`), INDEX `release` (`release`), INDEX `release_index` (`release_index`)) ENGINE=MyISAM
+ERROR: Array
+(
+    [0] => 42000
+    [1] => 1071
+    [2] => Specified key was too long; max key length is 1000 bytes
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Could not create table `modx_transport_providers`
+SQL: CREATE TABLE `modx_transport_providers` (`id` INTEGER unsigned NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL, `description` MEDIUMTEXT NULL, `service_url` TINYTEXT NULL, `username` VARCHAR(255) NOT NULL DEFAULT '', `api_key` VARCHAR(255) NOT NULL DEFAULT '', `created` DATETIME NOT NULL, `updated` TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP, PRIMARY KEY (`id`), UNIQUE KEY `name` (`name`), INDEX `api_key` (`api_key`), INDEX `username` (`username`)) ENGINE=MyISAM
+ERROR: Array
+(
+    [0] => 42000
+    [1] => 1071
+    [2] => Specified key was too long; max key length is 1000 bytes
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_workspaces' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_workspaces` (`id`, `name`, `path`, `created`, `active`) VALUES (1, 'Default MODX workspace', '{core_path}', '2014-10-01 14:00:37', 1)
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_workspaces' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modWorkspace; criteria: Array
+(
+    [id] => 1
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_transport_providers' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_transport_providers` (`name`, `description`, `service_url`, `username`, `api_key`, `created`) VALUES ('modx.com', 'The official MODX transport facility for 3rd party components.', 'http://rest.modx.com/extras/', '', '', '2014-07-22 15:36:51')
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_transport_providers' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modTransportProvider; criteria: Array
+(
+    [name] => modx.com
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_menus' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_menus` (`text`, `parent`, `action`, `description`, `icon`, `menuindex`, `params`, `handler`, `permissions`, `namespace`) VALUES ('topnav', '', '', 'topnav_desc', '', 0, '', '', '', 'core')
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_menus' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modMenu; criteria: Array
+(
+    [text] => topnav
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_menus' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_menus` (`text`, `parent`, `action`, `description`, `icon`, `menuindex`, `params`, `handler`, `permissions`, `namespace`) VALUES ('usernav', '', '', 'usernav_desc', '', 0, '', '', '', 'core')
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_menus' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modMenu; criteria: Array
+(
+    [text] => usernav
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_content_type' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_content_type` (`name`, `description`, `mime_type`, `file_extensions`, `binary`) VALUES ('HTML', 'HTML content', 'text/html', '.html', 0)
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_content_type' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modContentType; criteria: Array
+(
+    [mime_type] => text/html
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_content_type' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_content_type` (`name`, `description`, `mime_type`, `file_extensions`, `binary`) VALUES ('XML', 'XML content', 'text/xml', '.xml', 0)
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_content_type' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modContentType; criteria: Array
+(
+    [mime_type] => text/xml
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_content_type' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_content_type` (`name`, `description`, `mime_type`, `file_extensions`, `binary`) VALUES ('text', 'plain text content', 'text/plain', '.txt', 0)
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_content_type' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modContentType; criteria: Array
+(
+    [mime_type] => text/plain
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_content_type' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_content_type` (`name`, `description`, `mime_type`, `file_extensions`, `binary`) VALUES ('CSS', 'CSS content', 'text/css', '.css', 0)
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_content_type' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modContentType; criteria: Array
+(
+    [mime_type] => text/css
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_content_type' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_content_type` (`name`, `description`, `mime_type`, `file_extensions`, `binary`) VALUES ('javascript', 'javascript content', 'text/javascript', '.js', 0)
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_content_type' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modContentType; criteria: Array
+(
+    [mime_type] => text/javascript
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_content_type' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_content_type` (`name`, `description`, `mime_type`, `file_extensions`, `binary`) VALUES ('RSS', 'For RSS feeds', 'application/rss+xml', '.rss', 0)
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_content_type' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modContentType; criteria: Array
+(
+    [mime_type] => application/rss+xml
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_content_type' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_content_type` (`name`, `description`, `mime_type`, `file_extensions`, `binary`) VALUES ('JSON', 'JSON', 'application/json', '.json', 0)
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_content_type' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modContentType; criteria: Array
+(
+    [mime_type] => application/json
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_content_type' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_content_type` (`name`, `description`, `mime_type`, `file_extensions`, `binary`) VALUES ('PDF', 'PDF Files', 'application/pdf', '.pdf', 1)
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_content_type' doesn't exist
+)
+
+[2014-10-01 14:00:37] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modContentType; criteria: Array
+(
+    [mime_type] => application/pdf
+)
+
+[2014-10-01 14:00:41] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_context_setting' doesn't exist
+)
+
+[2014-10-01 14:00:41] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_context_setting` (`context_key`, `key`, `value`, `xtype`, `namespace`, `area`) VALUES ('mgr', 'allow_tags_in_post', '1', 'combo-boolean', 'core', 'system')
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_context_setting' doesn't exist
+)
+
+[2014-10-01 14:00:41] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modContextSetting; criteria: Array
+(
+    [context_key] => mgr
+    [key] => allow_tags_in_post
+)
+
+[2014-10-01 14:00:41] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_context_setting' doesn't exist
+)
+
+[2014-10-01 14:00:41] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_context_setting` (`context_key`, `key`, `value`, `xtype`, `namespace`, `area`) VALUES ('mgr', 'modRequest.class', 'modManagerRequest', 'textfield', 'core', 'system')
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_context_setting' doesn't exist
+)
+
+[2014-10-01 14:00:41] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modContextSetting; criteria: Array
+(
+    [context_key] => mgr
+    [key] => modRequest.class
+)
+
+[2014-10-01 14:00:41] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_membergroup_names' doesn't exist
+)
+
+[2014-10-01 14:00:41] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_membergroup_names` (`id`, `name`, `parent`, `rank`, `dashboard`) VALUES (1, 'Administrator', 0, 0, 1)
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_membergroup_names' doesn't exist
+)
+
+[2014-10-01 14:00:41] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modUserGroup; criteria: Array
+(
+    [id] => 1
+)
+
+[2014-10-01 14:00:41] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_user_group_roles' doesn't exist
+)
+
+[2014-10-01 14:00:41] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_user_group_roles` (`id`, `name`, `authority`) VALUES (1, 'Member', 9999)
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_user_group_roles' doesn't exist
+)
+
+[2014-10-01 14:00:41] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modUserGroupRole; criteria: Array
+(
+    [id] => 1
+)
+
+[2014-10-01 14:00:41] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_user_group_roles' doesn't exist
+)
+
+[2014-10-01 14:00:41] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_user_group_roles` (`id`, `name`, `authority`) VALUES (2, 'Super User', 0)
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_user_group_roles' doesn't exist
+)
+
+[2014-10-01 14:00:41] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modUserGroupRole; criteria: Array
+(
+    [id] => 2
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_access_policies` (`name`, `description`, `parent`, `template`, `class`, `data`, `lexicon`) VALUES ('Resource', 'MODX Resource Policy with all attributes.', 0, 0, '', '{\"add_children\":true,\"create\":true,\"copy\":true,\"delete\":true,\"list\":true,\"load\":true,\"move\":true,\"publish\":true,\"remove\":true,\"save\":true,\"steal_lock\":true,\"undelete\":true,\"unpublish\":true,\"view\":true}', 'permissions')
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modAccessPolicy; criteria: Array
+(
+    [name] => Resource
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_access_policies` (`name`, `description`, `parent`, `template`, `class`, `data`, `lexicon`) VALUES ('Administrator', 'Context administration policy with all permissions.', 0, 0, '', '{\"about\":true,\"access_permissions\":true,\"actions\":true,\"change_password\":true,\"change_profile\":true,\"charsets\":true,\"class_map\":true,\"components\":true,\"content_types\":true,\"countries\":true,\"create\":true,\"credits\":true,\"customize_forms\":true,\"dashboards\":true,\"database\":true,\"database_truncate\":true,\"delete_category\":true,\"delete_chunk\":true,\"delete_context\":true,\"delete_document\":true,\"delete_eventlog\":true,\"delete_plugin\":true,\"delete_propertyset\":true,\"delete_role\":true,\"delete_snippet\":true,\"delete_template\":true,\"delete_tv\":true,\"delete_user\":true,\"directory_chmod\":true,\"directory_create\":true,\"directory_list\":true,\"directory_remove\":true,\"directory_update\":true,\"edit_category\":true,\"edit_chunk\":true,\"edit_context\":true,\"edit_document\":true,\"edit_locked\":true,\"edit_plugin\":true,\"edit_propertyset\":true,\"edit_role\":true,\"edit_snippet\":true,\"edit_template\":true,\"edit_tv\":true,\"edit_user\":true,\"element_tree\":true,\"empty_cache\":true,\"error_log_erase\":true,\"error_log_view\":true,\"export_static\":true,\"file_create\":true,\"file_list\":true,\"file_manager\":true,\"file_remove\":true,\"file_tree\":true,\"file_update\":true,\"file_upload\":true,\"file_view\":true,\"flush_sessions\":true,\"frames\":true,\"help\":true,\"home\":true,\"import_static\":true,\"languages\":true,\"lexicons\":true,\"list\":true,\"load\":true,\"logout\":true,\"logs\":true,\"menus\":true,\"menu_reports\":true,\"menu_security\":true,\"menu_site\":true,\"menu_support\":true,\"menu_system\":true,\"menu_tools\":true,\"menu_user\":true,\"messages\":true,\"namespaces\":true,\"new_category\":true,\"new_chunk\":true,\"new_context\":true,\"new_document\":true,\"new_document_in_root\":true,\"new_plugin\":true,\"new_propertyset\":true,\"new_role\":true,\"new_snippet\":true,\"new_static_resource\":true,\"new_symlink\":true,\"new_template\":true,\"new_tv\":true,\"new_user\":true,\"new_weblink\":true,\"packages\":true,\"policy_delete\":true,\"policy_edit\":true,\"policy_new\":true,\"policy_save\":true,\"policy_template_delete\":true,\"policy_template_edit\":true,\"policy_template_new\":true,\"policy_template_save\":true,\"policy_template_view\":true,\"policy_view\":true,\"property_sets\":true,\"providers\":true,\"publish_document\":true,\"purge_deleted\":true,\"remove\":true,\"remove_locks\":true,\"resource_duplicate\":true,\"resourcegroup_delete\":true,\"resourcegroup_edit\":true,\"resourcegroup_new\":true,\"resourcegroup_resource_edit\":true,\"resourcegroup_resource_list\":true,\"resourcegroup_save\":true,\"resourcegroup_view\":true,\"resource_quick_create\":true,\"resource_quick_update\":true,\"resource_tree\":true,\"save\":true,\"save_category\":true,\"save_chunk\":true,\"save_context\":true,\"save_document\":true,\"save_plugin\":true,\"save_propertyset\":true,\"save_role\":true,\"save_snippet\":true,\"save_template\":true,\"save_tv\":true,\"save_user\":true,\"search\":true,\"settings\":true,\"sources\":true,\"source_delete\":true,\"source_edit\":true,\"source_save\":true,\"source_view\":true,\"steal_locks\":true,\"tree_show_element_ids\":true,\"tree_show_resource_ids\":true,\"undelete_document\":true,\"unlock_element_properties\":true,\"unpublish_document\":true,\"usergroup_delete\":true,\"usergroup_edit\":true,\"usergroup_new\":true,\"usergroup_save\":true,\"usergroup_user_edit\":true,\"usergroup_user_list\":true,\"usergroup_view\":true,\"view\":true,\"view_category\":true,\"view_chunk\":true,\"view_context\":true,\"view_document\":true,\"view_element\":true,\"view_eventlog\":true,\"view_offline\":true,\"view_plugin\":true,\"view_propertyset\":true,\"view_role\":true,\"view_snippet\":true,\"view_sysinfo\":true,\"view_template\":true,\"view_tv\":true,\"view_unpublished\":true,\"view_user\":true,\"workspaces\":true}', 'permissions')
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modAccessPolicy; criteria: Array
+(
+    [name] => Administrator
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_access_policies` (`name`, `description`, `parent`, `template`, `class`, `data`, `lexicon`) VALUES ('Load Only', 'A minimal policy with permission to load an object.', 0, 0, '', '{\"load\":true}', 'permissions')
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modAccessPolicy; criteria: Array
+(
+    [name] => Load Only
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_access_policies` (`name`, `description`, `parent`, `template`, `class`, `data`, `lexicon`) VALUES ('Load, List and View', 'Provides load, list and view permissions only.', 0, 0, '', '{\"load\":true,\"list\":true,\"view\":true}', 'permissions')
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modAccessPolicy; criteria: Array
+(
+    [name] => Load, List and View
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_access_policies` (`name`, `description`, `parent`, `template`, `class`, `data`, `lexicon`) VALUES ('Object', 'An Object policy with all permissions.', 0, 0, '', '{\"load\":true,\"list\":true,\"view\":true,\"save\":true,\"remove\":true}', 'permissions')
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modAccessPolicy; criteria: Array
+(
+    [name] => Object
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_access_policies` (`name`, `description`, `parent`, `template`, `class`, `data`, `lexicon`) VALUES ('Element', 'MODX Element policy with all attributes.', 0, 0, '', '{\"add_children\":true,\"create\":true,\"delete\":true,\"list\":true,\"load\":true,\"remove\":true,\"save\":true,\"view\":true,\"copy\":true}', 'permissions')
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modAccessPolicy; criteria: Array
+(
+    [name] => Element
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_access_policies` (`name`, `description`, `parent`, `template`, `class`, `data`, `lexicon`) VALUES ('Content Editor', 'Context administration policy with limited, content-editing related Permissions, but no publishing.', 0, 0, '', '{\"change_profile\":true,\"class_map\":true,\"countries\":true,\"edit_document\":true,\"frames\":true,\"help\":true,\"home\":true,\"load\":true,\"list\":true,\"logout\":true,\"menu_reports\":true,\"menu_site\":true,\"menu_support\":true,\"menu_tools\":true,\"menu_user\":true,\"resource_duplicate\":true,\"resource_tree\":true,\"save_document\":true,\"source_view\":true,\"tree_show_resource_ids\":true,\"view\":true,\"view_document\":true,\"new_document\":true,\"delete_document\":true}', 'permissions')
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modAccessPolicy; criteria: Array
+(
+    [name] => Content Editor
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_access_policies` (`name`, `description`, `parent`, `template`, `class`, `data`, `lexicon`) VALUES ('Media Source Admin', 'Media Source administration policy.', 0, 0, '', '{\"create\":true,\"copy\":true,\"load\":true,\"list\":true,\"save\":true,\"remove\":true,\"view\":true}', 'permissions')
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modAccessPolicy; criteria: Array
+(
+    [name] => Media Source Admin
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_access_policies` (`name`, `description`, `parent`, `template`, `class`, `data`, `lexicon`) VALUES ('Media Source User', 'Media Source user policy, with basic viewing and using - but no editing - of Media Sources.', 0, 0, '', '{\"load\":true,\"list\":true,\"view\":true}', 'permissions')
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modAccessPolicy; criteria: Array
+(
+    [name] => Media Source User
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_access_policies` (`name`, `description`, `parent`, `template`, `class`, `data`, `lexicon`) VALUES ('Developer', 'Context administration policy with most Permissions except Administrator and Security functions.', 0, 0, '', '{\"about\":true,\"change_password\":true,\"change_profile\":true,\"charsets\":true,\"class_map\":true,\"components\":true,\"content_types\":true,\"countries\":true,\"create\":true,\"credits\":true,\"customize_forms\":true,\"dashboards\":true,\"database\":true,\"delete_category\":true,\"delete_chunk\":true,\"delete_context\":true,\"delete_document\":true,\"delete_eventlog\":true,\"delete_plugin\":true,\"delete_propertyset\":true,\"delete_snippet\":true,\"delete_template\":true,\"delete_tv\":true,\"delete_role\":true,\"delete_user\":true,\"directory_chmod\":true,\"directory_create\":true,\"directory_list\":true,\"directory_remove\":true,\"directory_update\":true,\"edit_category\":true,\"edit_chunk\":true,\"edit_context\":true,\"edit_document\":true,\"edit_locked\":true,\"edit_plugin\":true,\"edit_propertyset\":true,\"edit_role\":true,\"edit_snippet\":true,\"edit_template\":true,\"edit_tv\":true,\"edit_user\":true,\"element_tree\":true,\"empty_cache\":true,\"error_log_erase\":true,\"error_log_view\":true,\"export_static\":true,\"file_create\":true,\"file_list\":true,\"file_manager\":true,\"file_remove\":true,\"file_tree\":true,\"file_update\":true,\"file_upload\":true,\"file_view\":true,\"frames\":true,\"help\":true,\"home\":true,\"import_static\":true,\"languages\":true,\"lexicons\":true,\"list\":true,\"load\":true,\"logout\":true,\"logs\":true,\"menu_reports\":true,\"menu_site\":true,\"menu_support\":true,\"menu_system\":true,\"menu_tools\":true,\"menu_user\":true,\"menus\":true,\"messages\":true,\"namespaces\":true,\"new_category\":true,\"new_chunk\":true,\"new_context\":true,\"new_document\":true,\"new_static_resource\":true,\"new_symlink\":true,\"new_weblink\":true,\"new_document_in_root\":true,\"new_plugin\":true,\"new_propertyset\":true,\"new_role\":true,\"new_snippet\":true,\"new_template\":true,\"new_tv\":true,\"new_user\":true,\"packages\":true,\"property_sets\":true,\"providers\":true,\"publish_document\":true,\"purge_deleted\":true,\"remove\":true,\"resource_duplicate\":true,\"resource_quick_create\":true,\"resource_quick_update\":true,\"resource_tree\":true,\"save\":true,\"save_category\":true,\"save_chunk\":true,\"save_context\":true,\"save_document\":true,\"save_plugin\":true,\"save_propertyset\":true,\"save_snippet\":true,\"save_template\":true,\"save_tv\":true,\"save_user\":true,\"search\":true,\"settings\":true,\"source_delete\":true,\"source_edit\":true,\"source_save\":true,\"source_view\":true,\"sources\":true,\"tree_show_element_ids\":true,\"tree_show_resource_ids\":true,\"undelete_document\":true,\"unpublish_document\":true,\"unlock_element_properties\":true,\"view\":true,\"view_category\":true,\"view_chunk\":true,\"view_context\":true,\"view_document\":true,\"view_element\":true,\"view_eventlog\":true,\"view_offline\":true,\"view_plugin\":true,\"view_propertyset\":true,\"view_role\":true,\"view_snippet\":true,\"view_sysinfo\":true,\"view_template\":true,\"view_tv\":true,\"view_user\":true,\"view_unpublished\":true,\"workspaces\":true}', 'permissions')
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modAccessPolicy; criteria: Array
+(
+    [name] => Developer
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement:
+INSERT INTO `modx_access_policies` (`name`, `description`, `parent`, `template`, `class`, `data`, `lexicon`) VALUES ('Context', 'A standard Context policy that you can apply when creating Context ACLs for basic read/write and view_unpublished access within a Context.', 0, 0, '', '{\"load\":true,\"list\":true,\"view\":true,\"save\":true,\"remove\":true,\"copy\":true,\"view_unpublished\":true}', 'permissions')
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error saving vehicle object of class modAccessPolicy; criteria: Array
+(
+    [name] => Context
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) xPDOVehicle resolver failed: type php (C:/xampp/htdocs/CMS/core/packages/core/modAccessPolicy/0ec6318306fefc659b47630a096c5ca6.resolve.policies.resolver)
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Could not resolve vehicle for object of class modAccessPolicy; criteria: Array
+(
+    [name] => Context
+)
+
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Could not copy C:/xampp/htdocs/CMS/core/packages/core/modContext/0bbcdfc66f1618c1298ccd7dbcc72259/0/ to C:/xampp/htdocs/CMS/index.php
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Could not copy C:/xampp/htdocs/CMS/core/packages/core/modContext/0bbcdfc66f1618c1298ccd7dbcc72259/1/ to C:/xampp/htdocs/CMS/ht.access
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Could not copy C:/xampp/htdocs/CMS/core/packages/core/modContext/bc9913c61b19eeb211989b49202e3614/0/ to C:/xampp/htdocs/CMS/manager/assets
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Could not copy C:/xampp/htdocs/CMS/core/packages/core/modContext/bc9913c61b19eeb211989b49202e3614/1/ to C:/xampp/htdocs/CMS/manager/controllers
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Could not copy C:/xampp/htdocs/CMS/core/packages/core/modContext/bc9913c61b19eeb211989b49202e3614/2/ to C:/xampp/htdocs/CMS/manager/templates
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Could not copy C:/xampp/htdocs/CMS/core/packages/core/modContext/bc9913c61b19eeb211989b49202e3614/3/ to C:/xampp/htdocs/CMS/manager/min
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Could not copy C:/xampp/htdocs/CMS/core/packages/core/modContext/bc9913c61b19eeb211989b49202e3614/4/ to C:/xampp/htdocs/CMS/manager/ht.access
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Could not copy C:/xampp/htdocs/CMS/core/packages/core/modContext/bc9913c61b19eeb211989b49202e3614/5/ to C:/xampp/htdocs/CMS/manager/cache.manifest.php
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Could not copy C:/xampp/htdocs/CMS/core/packages/core/modContext/bc9913c61b19eeb211989b49202e3614/6/ to C:/xampp/htdocs/CMS/manager/index.php
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Could not install files from C:/xampp/htdocs/CMS/core/packages/core/xPDOFileVehicle/235515cce960e1c34423c3483137bf15/ to C:/xampp/htdocs/CMS/connectors/
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Could not install files from C:/xampp/htdocs/CMS/core/packages/core/xPDOFileVehicle/340adaa02e1c349d1cf12b3957052074/ to C:/xampp/htdocs/CMS/connectors/
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Could not install files from C:/xampp/htdocs/CMS/core/packages/core/xPDOFileVehicle/5925cb565ad59a1f3f557fcdb06fb2ba/ to C:/xampp/htdocs/CMS/connectors/
+[2014-10-01 14:00:43] (ERROR @ /cms/setup/index.php) Could not install files from C:/xampp/htdocs/CMS/core/packages/core/xPDOFileVehicle/38debd032a2de5511423daf300fb14cc/ to C:/xampp/htdocs/CMS/connectors/
+[2014-10-01 14:00:44] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_workspaces' doesn't exist
+)
+
+[2014-10-01 14:00:44] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:44] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_access_policies' doesn't exist
+)
+
+[2014-10-01 14:00:44] (ERROR @ /cms/setup/index.php) Error 42S02 executing statement: 
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'modx.modx_membergroup_names' doesn't exist
+)
+

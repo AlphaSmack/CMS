@@ -9,3 +9,4 @@ If you do not have the snippets and chunks used in the template already installe
 This template uses a modified version of the standard DropMenu snippet, DropMenuS. Copy/paste the contents of the DropMenuS.snippet.php file into a new Snippet in the manager.
  
 There is a section in the template for the inclusion of the NewsListing snippet if you wish; it is marked with a comment in the HTML of the template.
+

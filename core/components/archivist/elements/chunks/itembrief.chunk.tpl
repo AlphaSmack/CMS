@@ -1,1 +1,0 @@
-<li><a href="[[~[[+id]]]]">[[+pagetitle]]</a></li>

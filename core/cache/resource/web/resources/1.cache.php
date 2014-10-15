@@ -5,9 +5,9 @@
     'id' => 1,
     'type' => 'document',
     'contentType' => 'text/html',
-    'pagetitle' => 'CMS Kodutöö',
-    'longtitle' => 'Ei soovita',
-    'description' => 'CMS Kodutöö',
+    'pagetitle' => 'Home',
+    'longtitle' => '',
+    'description' => '',
     'alias' => 'index',
     'link_attributes' => '',
     'published' => 1,
@@ -16,16 +16,16 @@
     'parent' => 0,
     'isfolder' => 0,
     'introtext' => '',
-    'content' => '<p>sample.ArticlesContainerTemplate</p>',
+    'content' => '',
     'richtext' => 1,
-    'template' => 1,
+    'template' => 2,
     'menuindex' => 0,
     'searchable' => 1,
     'cacheable' => 1,
     'createdby' => 1,
-    'createdon' => 1412285731,
+    'createdon' => 1413397367,
     'editedby' => 1,
-    'editedon' => 1412289126,
+    'editedon' => 1413398071,
     'deleted' => 0,
     'deletedon' => 0,
     'deletedby' => 0,
@@ -45,64 +45,8 @@
     'hide_children_in_tree' => 0,
     'show_in_tree' => 1,
     'properties' => NULL,
-    '_content' => '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>CMS Kodutöö - Ei soovita</title>
-<meta http-equiv="Content-Type" content="text/html; charset=[(modx_charset)]" />
-<base href="[[*site_url]]"></base>
-<link rel="stylesheet" href="assets/templates/foundation/default.css" type="text/css" />
-<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="[(site_url)][~11~]" />
-  </head>
-<body>
-<header>
-<div class="header">
-	<h1><a href="[[*site_url]]">CMS Kodutöö</a></h1>
-</div>
-</header>
-<article>
-<div id="left">
-	<div id="menu" class="boxed">
-		<h2 class="heading">Pages</h2>
-<ul><li class="first active"><a href="http://192.168.1.67:8080/cms/" title="CMS Kodutöö" >CMS Kodutöö</a></li>
-</ul>
-
-		<h2 class="heading">Latest Entries</h2>
-[[Ditto? &startID=`2` &summarize=`3` &total=`20` &commentschunk=`Comments` &tpl=`nl_sidebar` &showarch=`0` &truncLen=`100` &truncSplit=`0`]]
-	</div>
-</div>
-<!-- end #left -->
-<div id="right">
-	<div class="boxed">
-		<h2 class="heading">Latest News</h2>
-[[ListIndexer?LIn_root=0]] 
-		<h2 class="heading">Our Friends</h2>
-<ul>
-<li>List item number one</li>
-<li>List item number two</li>
-<li>List item number three </li>
-<li>List item number four </li>
-<li>List item number five </li>
-<li>List item number six </li>
-</ul>
-	</div>
-</div>
-<!-- end #right -->
-<div id="center">
-	<div class="boxed">
-		<h1 class="heading">[*pagetitle*]</h1>
-		<p>[*#content*]</p>
-	</div>
-</div>
-<!-- end #center -->
-<div style="clear: both;">&nbsp;</div>
-<div id="footer">
-	<p id="legal">Copyright &copy; [(site_name)]. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. Template by <a href="http://modxd.com">MODx Templates</a></p>
-	<p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
-<article>
-</div>
-</body>
-</html>',
+    '_content' => '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><base href="http://localhost/CMS/" /><meta http-equiv="content-type" content="text/html; charset=iso-8859-1" /><link rel="stylesheet" type="text/css" href="assets/templates/andreas01/style/andreas01.css" media="screen,projection" /><link rel="stylesheet" type="text/css" href="assets/templates/andreas01/style/print.css" media="print" /><title>MODX Revolution | Home</title></head><body><div id="wrap">  <div id="header">    <h1>MODX Revolution</h1>    <p><strong>"I can see you fly. You are an angel with wings, high above the ground!"</strong><br />(traditional haiku poem)</p>  </div> <!-- end header -->  <img id="frontphoto" src="assets/templates/andreas01/images/front.jpg" width="760" height="175" alt="" />  <div id="avmenu"> <!-- left sidebar -->  <div class="sideblock" id="sideMenu">  <h2>Navigation</h2>    </div>      </div> <!-- end avmenu -->  <div id="extras"> <!-- right sidebar -->   <h3>More info:</h3>    <p>This is the third column, which can be used in many different ways. For example, it can be used for comments, site news, external links, ads or for more navigation links. It is all up to you!</p>
+    <h3>Version:</h3>    <p>andreas01 v1.2</p>  </div> <!-- end extras -->  <div id="content">      </div> <!-- end content -->  <div id="footer">    <p>&copy; 2005-2010 <a href="mailto:risto.mikelsaar@gmail.com">MODX Revolution</a> - Content managed by <a href="http://www.modxcms.com/">modX</a></p>  </div> <!-- end footer --></div> <!-- end wrap --></body></html>',
     '_isForward' => false,
   ),
   'contentType' => 
@@ -120,10 +64,8 @@
   ),
   'elementCache' => 
   array (
-    '[[*pagetitle]]' => 'CMS Kodutöö',
-    '[[*longtitle]]' => 'Ei soovita',
-    '[[Wayfinder?startId=`0` &level=`1`]]' => '<ul><li class="first active"><a href="http://192.168.1.67:8080/cms/" title="CMS Kodutöö" >CMS Kodutöö</a></li>
-</ul>',
+    '[[*pagetitle]]' => 'Home',
+    '[[Wayfinder? ]]' => '',
   ),
   'sourceCache' => 
   array (
@@ -136,7 +78,7 @@
       array (
         'fields' => 
         array (
-          'id' => 16,
+          'id' => 1,
           'source' => 0,
           'property_preprocess' => false,
           'name' => 'Wayfinder',
@@ -936,9 +878,6 @@ if ($wf->_config[\'ph\']) {
         ),
         'policies' => 
         array (
-          'web' => 
-          array (
-          ),
         ),
         'source' => 
         array (
